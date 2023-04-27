@@ -1,0 +1,107 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block-repo-wrapper {
+  width: 100%;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.block-repo {
+  max-width: 600px;
+  width: 90%;
+}
+
+.search {
+  padding: 2px 10px;
+  width: 100%;
+  font-size: 2.4rem;
+}
+
+.search:focus + .autocom-box {
+  display: block;
+}
+
+.autocom-box {
+  display: none;
+}
+
+.autocom-box:hover {
+  display: block;
+}
+
+.autocom-box__item {
+  padding: 2px 10px;
+  width: 100%;
+  border: 2px solid black;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.autocom-box__item:hover {
+  background: aqua;
+}
+
+.added-repo-container {
+  margin: 30px 0;
+}
+
+.repo {
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: darkorchid;
+  border: 1px solid black;
+  font-size: 1.4rem;
+}
+
+.repo__info {
+  width: 80%;
+}
+
+.repo p {
+  margin: 3px 0;
+}
+
+.repo__del {
+  width: 20%;
+  border: none;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4rem;
+  -webkit-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.repo__del:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+/*# sourceMappingURL=style.css.map */
