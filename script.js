@@ -93,6 +93,7 @@ class Search {
     ).then((res) => {
       if (res.ok) {
         res.json().then((res) => {
+          this.view.autocomBox.innerHTML = "";
           let countRepo = 0;
           while (countRepo < res.items.length && countRepo < 5) {
             console.log(res.items[countRepo]);
@@ -101,7 +102,6 @@ class Search {
           }
         });
       } else {
-        alert("Что-то пошло не так");
       }
     });
   }
