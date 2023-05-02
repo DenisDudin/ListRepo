@@ -89,17 +89,14 @@ class Search {
 
   async serachRepo() {
     return await fetch(
-      `https://api.github.com/search/repositories?q=${this.view.searchInput.value}`
+      `https://api.github.com/search/repositories?q=${this.view.searchInput.value}&per_page=5`
     ).then((res) => {
       if (res.ok) {
         res.json().then((res) => {
           this.view.autocomBox.innerHTML = "";
-          let countRepo = 0;
-          while (countRepo < res.items.length && countRepo < 5) {
-            console.log(res.items[countRepo]);
-            this.view.createSearchOption(res.items[countRepo]);
-            countRepo++;
-          }
+          res.items.forEach((item) => {
+            this.view.createSearchOption(item);
+          });
         });
       } else {
       }
